@@ -1,42 +1,37 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useContext} from "react"
+import styled from "styled-components";
+import ThemeContext from '../theme/theme-context';
+import NavLink from './navlink';
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+const Header = () => {
+  const theme = useContext(ThemeContext);
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+  return (
+  <HeaderContainer theme={theme}>
+    <Navigator>
+      <NavLink title="Home" to="/" />
+      <NavLink title="Portfólio" to="/portfolio" />
+      <NavLink title="Blog" to="/blog" />
+      <NavLink title="Sobre" to="/sobre" />
+    </Navigator>
+  </HeaderContainer>
+  );
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+const HeaderContainer = styled.header`
+  background-color: ${props => props.color2};
+  margin-bottom: 1.45rem;
+`;
+
+const Navigator = styled.nav`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem;
+`;
 
 export default Header
