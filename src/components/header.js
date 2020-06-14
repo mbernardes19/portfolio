@@ -8,7 +8,7 @@ const Header = () => {
   const theme = useContext(ThemeContext);
 
   return (
-  <HeaderContainer theme={theme}>
+  <HeaderContainer>
     <Navigator>
       <NavLink title="Home" to="/" />
       <NavLink title="Portfólio" to="/portfolio" />
@@ -20,7 +20,7 @@ const Header = () => {
 }
 
 const HeaderContainer = styled.header`
-  background-color: ${props => props.color2};
+  background-color: ${props => props.theme.color1};
   margin-bottom: 1.45rem;
 `;
 
@@ -29,9 +29,9 @@ const Navigator = styled.nav`
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 960px;
+  max-width: 820px;
   margin: 0 auto;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.45rem 4.0875rem;
 `;
 
 export default Header
