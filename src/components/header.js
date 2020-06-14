@@ -11,9 +11,9 @@ const Header = () => {
   <HeaderContainer>
     <Navigator>
       <NavLink title="Home" to="/" />
-      <NavLink title="Portfólio" to="/portfolio" />
-      <NavLink title="Blog" to="/blog" />
-      <NavLink title="Sobre" to="/sobre" />
+      <NavLink title="Portfólio" to="#portfolio" />
+      <NavLink title="Blog" to="#blog" />
+      <NavLink title="Sobre" to="#about" />
     </Navigator>
   </HeaderContainer>
   );

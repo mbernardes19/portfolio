@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'gatsby';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 import styled from 'styled-components';
 
 export default function NavLink({ title, to }) {
@@ -13,7 +13,7 @@ export default function NavLink({ title, to }) {
 
     return (
         <div ref={divContainer} onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} style={{ margin: 0 }}>
-            <Link
+            <AnchorLink
                 to={to}
                 style={{
                     color: `white`,
@@ -23,7 +23,7 @@ export default function NavLink({ title, to }) {
                 }}
             >
                 {title}
-            </Link>
+            </AnchorLink>
             <UnderLine show={isMouseOver} width={componentWidth} />
       </div>
     );
