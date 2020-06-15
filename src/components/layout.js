@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <div style={{ backgroundColor: theme.color1 }}>
+    <div style={{ backgroundColor: theme.primaryColor }}>
       <Header />
       <div
         style={{

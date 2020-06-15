@@ -34,7 +34,7 @@ const UnderLine = styled.div`
     position: absolute;
     margin-top: ${props => props.show ? '3px' : '0px'};
     border-radius: 10px;
-    background-color: ${props => props.theme.color2};
+    background-color: ${props => props.theme.accentColor};
     width: ${props => props.width}px;
     height: 2px;
     transition: all .3s;

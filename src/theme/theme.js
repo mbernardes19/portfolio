@@ -1,7 +1,9 @@
 export default {
     default: {
-        color1: '#536CBD',
-        color2: '#F79069',
+        primaryColor: '#536CBD',
+        accentColor: '#F79069',
+        fontFamily: 'Roboto',
+        fontColor: 'white'
     },
     dark: {
 
