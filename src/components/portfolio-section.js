@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import Section from './section';
-import ContentEN from '../../public/content/en/portfolio/content.json'
+import ContentEN from '../content/en/portfolio/content.js';
 import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-// import SwipeableViews from 'react-swipeable-views';
-// import TabPanel from './tabs';
-
-
 
 export default function PorfolioSection() {
     const [value, setValue] = useState(0);
