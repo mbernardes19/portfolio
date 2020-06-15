@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './section';
-import ContentEN from '../content/en/hero/content.js';
+import ContentEN from '../content/en/hero/content.json';
 import { SectionHeader, SectionBody, SectionTitle } from './section';
 import styled from 'styled-components';
 

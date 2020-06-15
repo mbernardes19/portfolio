@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from './section';
-import ContentEN from '../content/en/about/content.js';
+import ContentEN from '../content/en/about/content.json';
 
 export default function AboutSection() {
     return(

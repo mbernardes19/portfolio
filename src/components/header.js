@@ -3,7 +3,7 @@ import React, {useContext} from "react"
 import styled from "styled-components";
 import ThemeContext from '../theme/theme-context';
 import NavLink from './navlink';
-import ContentEN from '../content/en/navlinks/content.js';
+import ContentEN from '../content/en/navlinks/content.json';
 
 const Header = () => {
   const theme = useContext(ThemeContext);

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Section from './section';
-import ContentEN from '../content/en/portfolio/content.js';
+import ContentEN from '../content/en/portfolio/content.json';
 import AppBar from '@material-ui/core/AppBar';
 
 export default function PorfolioSection() {
