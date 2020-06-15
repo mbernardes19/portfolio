@@ -3,6 +3,7 @@ import React, {useContext} from "react"
 import styled from "styled-components";
 import ThemeContext from '../theme/theme-context';
 import NavLink from './navlink';
+import ContentEN from '../../public/content/en/navlinks/content.json';
 
 const Header = () => {
   const theme = useContext(ThemeContext);
@@ -10,17 +11,17 @@ const Header = () => {
   return (
   <HeaderContainer>
     <Navigator>
-      <NavLink title="Home" to="/" />
-      <NavLink title="Portfólio" to="#portfolio" />
-      <NavLink title="Blog" to="#blog" />
-      <NavLink title="Sobre" to="#about" />
+      <NavLink title={ContentEN.home} to="/" />
+      <NavLink title={ContentEN.about} to="#about" />
+      <NavLink title={ContentEN.portfolio} to="#portfolio" />
+      <NavLink title={ContentEN.blog} to="#blog" />
     </Navigator>
   </HeaderContainer>
   );
 }
 
 const HeaderContainer = styled.header`
-  background-color: ${props => props.theme.color1};
+  background-color: ${props => props.theme.primaryColor};
   margin-bottom: 1.45rem;
 `;
 
