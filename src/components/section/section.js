@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Section({title, content, link, sectionHeader, sectionBody, width, center, topMargin, bottomMargin}) {
+export default function Section({title, content, link, sectionHeader, sectionBody, placement}) {
     const DefaultSectionHeader = () => (
         <SectionHeader>
             <SectionTitle>{title}</SectionTitle>
@@ -15,7 +15,7 @@ export default function Section({title, content, link, sectionHeader, sectionBod
     );
 
     return (
-        <SectionContainer id={link} width={width} center={center} topMargin={topMargin} bottomMargin={bottomMargin}>
+        <SectionContainer id={link} placement={placement}>
             { sectionHeader ? sectionHeader : <DefaultSectionHeader /> }
             { sectionBody ? sectionBody : <DefaultSectionBody /> }
         </SectionContainer>
@@ -23,10 +23,10 @@ export default function Section({title, content, link, sectionHeader, sectionBod
 }
 
 export const SectionContainer = styled.section`
-    max-width: ${props => props.width ? props.width : '100%'};
-    margin: ${props => props.center ? '0 auto' : '' };
-    margin-top: ${props => props.topMargin ? props.topMargin : ''};
-    margin-bottom: ${props => props.bottomMargin ? props.bottomMargin : ''};
+    max-width: ${props => props.placement.width ? props.placement.width : '100%'};
+    margin: ${props => props.placement.center ? '0 auto' : '' };
+    margin-top: ${props => props.placement.topMargin ? props.placement.topMargin : ''};
+    margin-bottom: ${props => props.placement.bottomMargin ? props.placement.bottomMargin : ''};
 `;
 
 export const SectionHeader = styled.header`

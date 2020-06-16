@@ -1,8 +1,9 @@
 import React from 'react';
 import Section from './section';
-import ContentEN from '../content/en/hero/content.json';
+import ContentEN from '../../content/en/hero/content.json';
 import { SectionHeader, SectionBody, SectionTitle } from './section';
 import styled from 'styled-components';
+import placement from './placement';
 
 export default function HeroSection() {
     const HeroSectionHeader = () => (
@@ -18,6 +19,18 @@ export default function HeroSection() {
         </SectionBody>
     )
 
+    const setPlacement = () => {
+        const aboutSectionPlacement = placement;
+        aboutSectionPlacement.width = '620px';
+        aboutSectionPlacement.center = true;
+        aboutSectionPlacement.left = false;
+        aboutSectionPlacement.right = false;
+        aboutSectionPlacement.topMargin = '1rem';
+        aboutSectionPlacement.bottomMargin = '2rem';
+        console.log(aboutSectionPlacement);
+        return aboutSectionPlacement;
+    };
+
     return(
         <Section
             title={ContentEN.title}
@@ -25,10 +38,7 @@ export default function HeroSection() {
             link="/"
             sectionHeader={<HeroSectionHeader />}
             sectionBody={<HeroSectionBody />}
-            width='620px'
-            center
-            topMargin='1rem'
-            bottomMargin='2rem'
+            placement={setPlacement()}
         />
     );
 }
