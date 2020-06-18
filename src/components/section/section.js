@@ -37,6 +37,8 @@ export const SectionHeader = styled.header`
 `;
 
 export const SectionTitle = styled.h2`
+    font-size: 2.5rem;
+    font-weight: 300;
 `;
 
 export const SectionBody = styled.article`
