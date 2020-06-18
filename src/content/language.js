@@ -87,7 +87,7 @@ const langs = {
         hero: {
             greeting: "Hi, I'm",
             name: "Matheus",
-            content: "I'm a frontend developer, I also teach programming and sometimes I try to make games"
+            content: "I'm a Frontend Developer, I also teach programming and sometimes I try to make games"
         },
         navLinks: {
             home: "Home",

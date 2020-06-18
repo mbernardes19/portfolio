@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Section from './section';
-import ContentEN from '../../content/en/about/content.json';
 import placement from './placement';
+import languageContext from '../../content/language-context';
 
 
 export default function AboutSection() {
+    const { about } = useContext(languageContext);
+
     const setPlacement = () => {
         const aboutSectionPlacement = placement;
         aboutSectionPlacement.width = '620px';
@@ -18,8 +20,8 @@ export default function AboutSection() {
 
     return(
         <Section
-            title={ContentEN.title}
-            content={ContentEN.content}
+            title={about.title}
+            content={about.content}
             link='about'
             placement={setPlacement()}
         ></Section>
