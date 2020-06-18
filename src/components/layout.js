@@ -12,22 +12,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import ThemeContext from '../theme/theme-context'
+import FeatureToggle from "./feature-toggle"
 
 const Layout = ({ children }) => {
   const theme = useContext(ThemeContext);
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <div style={{ backgroundColor: theme.primaryColor }}>
-      <Header />
+      <FeatureToggle disabled>
+        <Header />
+      </FeatureToggle>
       <div
         style={{
           margin: `0 auto`,
