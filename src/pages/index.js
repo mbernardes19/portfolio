@@ -5,6 +5,7 @@ import PageBase from '../components/page-base';
 import AboutSection from '../components/section/about-section';
 import HeroSection from "../components/section/hero-section";
 import PortfolioSection from '../components/section/portfolio-section';
+import FeatureToggle from '../components/feature-toggle';
 
 const HomePage = () => (
     <PageBase>
@@ -13,8 +14,10 @@ const HomePage = () => (
             <Image />
         </div>
         <HeroSection />
-        <AboutSection/>
-        <PortfolioSection/>
+        <FeatureToggle disabled>
+            <AboutSection/>
+            <PortfolioSection/>
+        </FeatureToggle>
     </PageBase>
 )
 
