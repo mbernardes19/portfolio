@@ -1,12 +1,15 @@
 
 const langs = {
     ptBr: {
+        messages: {
+            emailCopied: "Email copiado!"
+        },
         home: {
             title: "Home"
         },
         about: {
             title: "Sobre",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac velit odio. Pellentesque risus tellus, facilisis lobortis orci ut, ultricies finibus enim. Pellentesque volutpat pretium semper. Etiam vel nibh vitae augue ultricies vehicula eu at turpis. Vivamus elementum pharetra justo, ac scelerisque metus tincidunt ut. Praesent nec laoreet odio. Etiam suscipit et ligula sit amet ullamcorper. Cras viverra tellus risus, vel fermentum elit eleifend ut. Ut purus dolor, pulvinar eu felis nec, facilisis mollis leo. Praesent ipsum ante, rhoncus ac nunc et, volutpat posuere justo. Suspendisse aliquam, diam vitae iaculis finibus, purus sapien iaculis tortor, nec dapibus leo augue et sapien. Duis a purus pulvinar, sollicitudin libero a, congue massa. Vestibulum porta enim at lectus luctus, in varius dui efficitur. Donec egestas magna metus, vel porta leo placerat id."
+            content: ""
         },
         blog: {},
         hero: {
@@ -76,12 +79,15 @@ const langs = {
     
     },
     en: {
+        messages: {
+            emailCopied: "Email copied!"
+        },
         home: {
             title: "Home"
         },
         about: {
             title: "About",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac velit odio. Pellentesque risus tellus, facilisis lobortis orci ut, ultricies finibus enim. Pellentesque volutpat pretium semper. Etiam vel nibh vitae augue ultricies vehicula eu at turpis. Vivamus elementum pharetra justo, ac scelerisque metus tincidunt ut. Praesent nec laoreet odio. Etiam suscipit et ligula sit amet ullamcorper. Cras viverra tellus risus, vel fermentum elit eleifend ut. Ut purus dolor, pulvinar eu felis nec, facilisis mollis leo. Praesent ipsum ante, rhoncus ac nunc et, volutpat posuere justo. Suspendisse aliquam, diam vitae iaculis finibus, purus sapien iaculis tortor, nec dapibus leo augue et sapien. Duis a purus pulvinar, sollicitudin libero a, congue massa. Vestibulum porta enim at lectus luctus, in varius dui efficitur. Donec egestas magna metus, vel porta leo placerat id."
+            content: ""
         },
         blog: {},
         hero: {
