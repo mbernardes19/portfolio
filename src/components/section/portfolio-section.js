@@ -1,34 +1,30 @@
 import React, { useState } from 'react';
 import Section from './section';
-import ContentEN from '../../content/en/portfolio/content.json';
 import AppBar from '@material-ui/core/AppBar';
 import placement from './placement';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Box from '@material-ui/core/Box';
 import PortfolioSectionItem from './portfolio-section-item';
 import {SectionHeader, SectionTitle } from './section';
-
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
+import TabPanel from '../tab/tabpanel';
+import ContentEN from '../../content/en/portfolio/content.json';
 
 export default function PorfolioSection() {
-    function TabPanel(props) {
-        const { children, value, index } = props;
-      
-        return (
-          <div
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-          >
-            {value === index && (
-              <Box style={{backgroundColor: '#3A53A5'}} padding={3}>
-                <div>{children}</div>
-              </Box>
-            )}
-          </div>
-        );
+  const { allImageSharp } = useStaticQuery(graphql`
+    query {
+      allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/project/"}}}) {
+        edges {
+          node {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
-      
-
+    }
+  `)
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -50,10 +46,15 @@ export default function PorfolioSection() {
     const PorfolioSectionBody = () => (
         <div>
             <TabPanel value={value} index={0}>
-                <PortfolioSectionItem title="teste" />
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Item Two
+              {
+                allImageSharp.edges.map((edge, index) => (
+                  <PortfolioSectionItem
+                    content={ContentEN.projects[index]}
+                    image={<Img fluid={edge.node.fluid} />} />
+                ))
+              }
             </TabPanel>
       </div>
     );
