@@ -8,7 +8,7 @@ import FeatureToggle from '../components/feature-toggle';
 
 const HomePage = () => (
     <PageBase>
-        <SEO title="Home" />
+        <SEO title="Matheus Bernardes" />
         <HeroSection />
         <FeatureToggle disabled>
             <AboutSection/>
