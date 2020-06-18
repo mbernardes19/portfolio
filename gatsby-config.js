@@ -34,7 +34,10 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-anchor-links"
+      resolve: "gatsby-plugin-anchor-links",
+      options: {
+        offset: -35
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
