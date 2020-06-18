@@ -14,7 +14,11 @@ const PageBase = ({ children }) => {
     <LanguageContext.Provider value={currentLang}>
     <ThemeProvider theme={theme.default}>
       <Layout>
+<<<<<<< HEAD
         <LanguageToggle setCurrentLanguage={setCurrentLang}/>
+=======
+        <LanguageToggle setCurrentLanguage={(lang) => setCurrentLang(lang)}/>
+>>>>>>> eb6ca70200a615bcf4665d1f4e7505223aba03a7
         {children}
       </Layout>
     </ThemeProvider>
