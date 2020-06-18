@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import placement from './placement';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import SocialMediaLinks from '../social-media';
 
 export default function HeroSection() {
     const data = useStaticQuery(graphql`
@@ -29,6 +30,7 @@ export default function HeroSection() {
     const HeroSectionBody = () => (
         <SectionBody center fontSize='1.2rem'>
             <p style={{textAlign: 'center', fontWeight: 400, marginBottom: '2.5rem'}}>{ContentEN.content}</p>
+            <SocialMediaLinks github twitter linkedin/>
         </SectionBody>
     )
 
