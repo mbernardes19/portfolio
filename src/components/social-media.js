@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import IconButton from '@material-ui/core/IconButton';
 import ContentEN from '../content/en/social-media/content.json';
+import { MdEmail } from 'react-icons/md';
+import  Snackbar from '@material-ui/core/Snackbar';
 
-export default function SocialMediaLinks ({github, twitter, linkedin}) {
+export default function SocialMediaLinks ({github, twitter, linkedin, email}) {
+    const [isCopied, setIsCopied] = useState(false);
+
     const Twitter = () => (
         <IconButton>
             <a href={ContentEN.twitter} target="_blank">
@@ -28,12 +32,44 @@ export default function SocialMediaLinks ({github, twitter, linkedin}) {
             </a>
         </IconButton>
     )
+
+    const Email = () => (
+        <IconButton onClick={() => copyToClipboard(ContentEN.email)}>
+            <MdEmail/>
+        </IconButton>
+    )
+
+    const copyToClipboard = text => {
+        const el = document.createElement('textarea');
+        el.value = text;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+        setIsCopied(true);
+    }
+
+    const Alert = () => (
+        <Snackbar
+            anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'right'
+            }}
+            open={isCopied}
+            autoHideDuration={3000}
+            message="Email copiado!"
+            onClose={() => setIsCopied(false)}
+        />
+    )
+
     return (
-        <IconContext.Provider value={{ color: "white", size: '2.5rem' }}>
+        <IconContext.Provider value={{ color: "white", size: '1.7rem' }}>
             <div style={{display: 'flex', flexFlow: 'row wrap'}}>
                 {github ? <GitHub/> : <></>}
                 {twitter ? <Twitter/> : <></>}
                 {linkedin ? <LinkedIn/> : <></>}
+                {email ? <Email/> : <></>}
+                <Alert/>
             </div>
         </IconContext.Provider>
     )

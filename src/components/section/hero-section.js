@@ -32,7 +32,7 @@ export default function HeroSection() {
     const HeroSectionBody = () => (
         <SectionBody center fontSize='1.2rem'>
             <p style={{textAlign: 'center', fontWeight: 400, marginBottom: '1.5rem'}}>{hero.content}</p>
-            <SocialMediaLinks github twitter linkedin/>
+            <SocialMediaLinks github twitter linkedin email/>
         </SectionBody>
     )
 
