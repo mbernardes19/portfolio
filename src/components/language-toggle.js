@@ -1,5 +1,6 @@
 import IconButton from '@material-ui/core/IconButton';
-import ReactCountryFlag from 'react-country-flag';
+import loadable from '@loadable/component'
+const ReactCountryFlag = loadable(() => import('react-country-flag'));
 import React from 'react';
 import lang from '../content/language'
 
