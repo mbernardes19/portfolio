@@ -12,9 +12,8 @@ const Header = () => {
   <HeaderContainer>
     <Navigator>
       <NavLink title={ContentEN.home} to="/" />
-      <NavLink title={ContentEN.about} to="#about" />
-      <NavLink title={ContentEN.portfolio} to="#portfolio" />
-      <NavLink title={ContentEN.blog} to="#blog" />
+      <NavLink title={ContentEN.about} to="/#about" />
+      <NavLink title={ContentEN.portfolio} to="/#portfolio" />
     </Navigator>
   </HeaderContainer>
   );
