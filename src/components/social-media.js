@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { FaGithub, FaTwitter, FaLinkedin } from 'react-icons/fa';
 import { IconContext } from "react-icons";
 import IconButton from '@material-ui/core/IconButton';
 import ContentEN from '../content/en/social-media/content.json';
 import { MdEmail } from 'react-icons/md';
 import  Snackbar from '@material-ui/core/Snackbar';
+import LanguageContext from '../content/language-context';
 
 export default function SocialMediaLinks ({github, twitter, linkedin, email}) {
     const [isCopied, setIsCopied] = useState(false);
+    const { messages } = useContext(LanguageContext);
 
     const Twitter = () => (
         <IconButton>
@@ -57,7 +59,7 @@ export default function SocialMediaLinks ({github, twitter, linkedin, email}) {
             }}
             open={isCopied}
             autoHideDuration={3000}
-            message="Email copiado!"
+            message={messages.emailCopied}
             onClose={() => setIsCopied(false)}
         />
     )

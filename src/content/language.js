@@ -1,6 +1,9 @@
 
 const langs = {
     ptBr: {
+        messages: {
+            emailCopied: "Email copiado!"
+        },
         home: {
             title: "Home"
         },
@@ -76,6 +79,9 @@ const langs = {
     
     },
     en: {
+        messages: {
+            emailCopied: "Email copied!"
+        },
         home: {
             title: "Home"
         },
