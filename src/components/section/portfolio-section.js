@@ -65,7 +65,7 @@ export default function PorfolioSection() {
         portfolioSectionPlacement.center = true;
         portfolioSectionPlacement.left = false;
         portfolioSectionPlacement.right = false;
-        portfolioSectionPlacement.topMargin = '2rem';
+        portfolioSectionPlacement.topMargin = '3rem';
         portfolioSectionPlacement.bottomMargin = '2rem';
         return portfolioSectionPlacement;
     };

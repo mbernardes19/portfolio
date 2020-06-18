@@ -29,7 +29,7 @@ export default function SocialMediaLinks ({github, twitter, linkedin}) {
         </IconButton>
     )
     return (
-        <IconContext.Provider value={{ color: "white", size: '3rem' }}>
+        <IconContext.Provider value={{ color: "white", size: '2.5rem' }}>
             <div style={{display: 'flex', flexFlow: 'row wrap'}}>
                 {github ? <GitHub/> : <></>}
                 {twitter ? <Twitter/> : <></>}

@@ -46,7 +46,7 @@ export default function HeroSection() {
     };
 
     return(
-        <div style={{ margin: '0 auto', padding: '20px 40px 0px 40px', maxWidth: `620px` }}>
+        <div style={{ margin: '1rem auto 0px auto', padding: '20px 40px 0px 40px', maxWidth: `620px` }}>
         <Img fluid={data.file.childImageSharp.fluid} />
             <Section
                 title={ContentEN.title}

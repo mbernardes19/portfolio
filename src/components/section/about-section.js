@@ -11,7 +11,7 @@ export default function AboutSection() {
         aboutSectionPlacement.center = true;
         aboutSectionPlacement.left = false;
         aboutSectionPlacement.right = false;
-        aboutSectionPlacement.topMargin = '2rem';
+        aboutSectionPlacement.topMargin = '3rem';
         aboutSectionPlacement.bottomMargin = '2rem';
         return aboutSectionPlacement;
     };
