@@ -12,18 +12,8 @@ export default function NavLink({ title, to }) {
     }, [isMouseOver]);
 
     return (
-        <div ref={divContainer} onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} style={{ margin: 0 }}>
-            <AnchorLink
-                to={to}
-                style={{
-                    color: `white`,
-                    textDecoration: `none`,
-                    fontSize: '20px',
-                    fontFamily: 'Roboto, sans-serif'
-                }}
-            >
-                {title}
-            </AnchorLink>
+        <div ref={divContainer} onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} style={{ margin: 0, fontSize: '1.1rem' }}>
+            <AnchorLink to={to}> {title} </AnchorLink>
             <UnderLine show={isMouseOver} width={componentWidth} />
       </div>
     );
