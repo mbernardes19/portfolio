@@ -4,6 +4,7 @@ import styled from "styled-components";
 import ThemeContext from '../theme/theme-context';
 import NavLink from './navlink';
 import ContentEN from '../content/en/navlinks/content.json';
+import FeatureToggle from "./feature-toggle";
 
 const Header = () => {
   const theme = useContext(ThemeContext);
@@ -11,9 +12,12 @@ const Header = () => {
   return (
   <HeaderContainer>
     <Navigator>
-      <NavLink title={ContentEN.home} to="/" />
-      <NavLink title={ContentEN.about} to="/#about" />
-      <NavLink title={ContentEN.portfolio} to="/#portfolio" />
+      <FeatureToggle disabled>
+        <NavLink title={ContentEN.home} to="/" />
+        <NavLink title={ContentEN.about} to="/#about" />
+        <NavLink title={ContentEN.portfolio} to="/#portfolio" />
+        <NavLink title={ContentEN.blog} to="/#blog" />
+      </FeatureToggle>
     </Navigator>
   </HeaderContainer>
   );
