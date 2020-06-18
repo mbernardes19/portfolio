@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Section from './section';
 import AppBar from '@material-ui/core/AppBar';
 import placement from './placement';
@@ -9,9 +9,11 @@ import {SectionHeader, SectionTitle } from './section';
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import TabPanel from '../tab/tabpanel';
-import ContentEN from '../../content/en/portfolio/content.json';
+import LanguageContext from '../../content/language-context';
 
 export default function PorfolioSection() {
+  const { portfolio } = useContext(LanguageContext);
+
   const { allImageSharp } = useStaticQuery(graphql`
     query {
       allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/project/"}}}) {
@@ -33,7 +35,7 @@ export default function PorfolioSection() {
 
     const PortfolioSectionHeader = () => (
         <SectionHeader>
-            <SectionTitle>{ContentEN.title}</SectionTitle>
+            <SectionTitle>{portfolio.title}</SectionTitle>
         <AppBar position="static" color="default">
             <Tabs value={value} onChange={handleChange}>
                 <Tab label="Design" />
@@ -51,7 +53,7 @@ export default function PorfolioSection() {
               {
                 allImageSharp.edges.map((edge, index) => (
                   <PortfolioSectionItem
-                    content={ContentEN.projects[index]}
+                    content={portfolio.projects[index]}
                     image={<Img fluid={edge.node.fluid} />} />
                 ))
               }
@@ -72,7 +74,7 @@ export default function PorfolioSection() {
 
     return(
         <Section
-            title={ContentEN.title}
+            title={portfolio.title}
             link='portfolio'
             sectionHeader={<PortfolioSectionHeader />}
             sectionBody={<PorfolioSectionBody />}

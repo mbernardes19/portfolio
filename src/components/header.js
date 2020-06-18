@@ -1,22 +1,21 @@
 import PropTypes from "prop-types"
 import React, {useContext} from "react"
 import styled from "styled-components";
-import ThemeContext from '../theme/theme-context';
+import LanguageContext from '../content/language-context';
 import NavLink from './navlink';
-import ContentEN from '../content/en/navlinks/content.json';
 import FeatureToggle from "./feature-toggle";
 
 const Header = () => {
-  const theme = useContext(ThemeContext);
+  const { home, about, portfolio, blog } = useContext(LanguageContext);
 
   return (
   <HeaderContainer>
     <Navigator>
       <FeatureToggle disabled>
-        <NavLink title={ContentEN.home} to="/" />
-        <NavLink title={ContentEN.about} to="/#about" />
-        <NavLink title={ContentEN.portfolio} to="/#portfolio" />
-        <NavLink title={ContentEN.blog} to="/#blog" />
+        <NavLink title={home.title} to="/" />
+        <NavLink title={about.title} to="/#about" />
+        <NavLink title={portfolio.title} to="/#portfolio" />
+        <NavLink title={blog.title} to="/#blog" />
       </FeatureToggle>
     </Navigator>
   </HeaderContainer>
