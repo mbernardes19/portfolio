@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Portfolio`,
-    description: `Portfólio de serviços de Matheus Bernardes`,
+    description: `Desenvolvimento de sites, apps e peças de design gráfico`,
     author: `@mbernardes19`,
   },
   plugins: [
