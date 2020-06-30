@@ -9,7 +9,8 @@ import LanguageContext from '../content/language-context';
 
 export default function SocialMediaLinks ({github, twitter, linkedin, email}) {
     const [isCopied, setIsCopied] = useState(false);
-    const { messages } = useContext(LanguageContext);
+    const { currentLang } = useContext(LanguageContext);
+    const { messages } = currentLang;
 
     const Twitter = () => (
         <IconButton>

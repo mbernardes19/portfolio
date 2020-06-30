@@ -12,7 +12,8 @@ import TabPanel from '../tab/tabpanel';
 import LanguageContext from '../../content/language-context';
 
 export default function PorfolioSection() {
-  const { portfolio } = useContext(LanguageContext);
+  const { currentLang } = useContext(LanguageContext);
+  const { portfolio } = currentLang;
 
   const { allImageSharp } = useStaticQuery(graphql`
     query {

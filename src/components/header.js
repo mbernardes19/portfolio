@@ -1,28 +1,33 @@
-import PropTypes from "prop-types"
 import React, {useContext} from "react"
 import styled from "styled-components";
 import LanguageContext from '../content/language-context';
 import NavLink from './navlink';
 import FeatureToggle from "./feature-toggle";
+import LanguageToggle from './language-toggle';
 
 const Header = () => {
-  const { home, about, portfolio, blog } = useContext(LanguageContext);
+  const { currentLang, setCurrentLang } = useContext(LanguageContext);
+  const { home, about, portfolio, blog } = currentLang;
 
   return (
   <HeaderContainer>
     <Navigator>
-      <FeatureToggle disabled>
         <NavLink title={home.title} to="/" />
         <NavLink title={about.title} to="/#about" />
+        <FeatureToggle disabled>
         <NavLink title={portfolio.title} to="/#portfolio" />
         <NavLink title={blog.title} to="/#blog" />
-      </FeatureToggle>
+        </FeatureToggle>
     </Navigator>
+    <LanguageToggle setCurrentLanguage={setCurrentLang}/>
   </HeaderContainer>
   );
 }
 
 const HeaderContainer = styled.header`
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
   background-color: ${props => props.theme.primaryColor};
   margin-bottom: 1.45rem;
 `;

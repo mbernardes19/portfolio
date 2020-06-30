@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import Section from './section';
 import placement from './placement';
-import languageContext from '../../content/language-context';
+import LanguageContext from '../../content/language-context';
 
 
 export default function AboutSection() {
-    const { about } = useContext(languageContext);
+    const { currentLang } = useContext(LanguageContext);
+    const { about } = currentLang;
 
     const setPlacement = () => {
         const aboutSectionPlacement = placement;

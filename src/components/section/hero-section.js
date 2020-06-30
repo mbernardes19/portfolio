@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Section from './section';
 import { SectionHeader, SectionBody, SectionTitle } from './section';
 import styled from 'styled-components';
@@ -9,7 +9,8 @@ import SocialMediaLinks from '../social-media';
 import LanguageContext from '../../content/language-context';
 
 export default function HeroSection() {
-  const { hero } = React.useContext(LanguageContext);
+  const { currentLang } = useContext(LanguageContext);
+  const { hero } = currentLang;
 
     const data = useStaticQuery(graphql`
     query {

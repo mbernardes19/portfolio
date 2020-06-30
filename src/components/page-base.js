@@ -5,16 +5,16 @@ import theme from '../theme/theme';
 import { ThemeProvider } from 'styled-components';
 import LanguageContext from '../content/language-context';
 import lang from '../content/language';
-import LanguageToggle from './language-toggle';
 
 const PageBase = ({ children }) => {
   const [currentLang, setCurrentLang] = useState(lang.ptBr);
+
+  const value = {currentLang, setCurrentLang}
   
   return (
-    <LanguageContext.Provider value={currentLang}>
+    <LanguageContext.Provider value={value}>
     <ThemeProvider theme={theme.default}>
       <Layout>
-        <LanguageToggle setCurrentLanguage={setCurrentLang}/>
         {children}
       </Layout>
     </ThemeProvider>
