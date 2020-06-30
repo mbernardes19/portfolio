@@ -6,7 +6,7 @@ const ReactCountryFlag = loadable(() => import('react-country-flag'));
 
 export default function LanguageToggle({ setCurrentLanguage }) {
     return (
-        <div style={{display: 'flex', flexFlow: 'row wrap', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+        <div style={{position: 'absolute', right: 0,display: 'flex', flexFlow: 'column wrap', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             <IconButton
                 onClick={() => setCurrentLanguage(lang.ptBr)}
                 style={{padding: '.4rem .3rem 0rem .3rem'}}
