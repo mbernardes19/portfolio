@@ -11,16 +11,13 @@ import PropTypes from "prop-types"
 import Header from "./header"
 import "./layout.css"
 import ThemeContext from '../theme/theme-context'
-import FeatureToggle from "./feature-toggle"
 
 const Layout = ({ children }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <div style={{ backgroundColor: theme.primaryColor }}>
-      <FeatureToggle disabled>
         <Header />
-      </FeatureToggle>
       <div
         style={{
           margin: `0 auto`,
