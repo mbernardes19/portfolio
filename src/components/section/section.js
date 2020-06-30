@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import AboutSection from './about-section';
 
 export default function Section({title, content, link, sectionHeader, sectionBody, placement}) {
     const DefaultSectionHeader = () => (
@@ -10,9 +11,18 @@ export default function Section({title, content, link, sectionHeader, sectionBod
     
     const DefaultSectionBody = () => (
         <SectionBody>
-            {content}
+            {content.map(paragraph => hasItalicText(paragraph) ? textWithItalic(paragraph) : <p>{paragraph}</p>)}
         </SectionBody>
     );
+
+    const hasItalicText = (text) => text.includes('*')
+    const textWithItalic = (text) => {
+        const re = /[^\*]+/
+        const italicText = re.exec(text)[0]
+        let regularParagraph = text.replace(italicText, "")
+        regularParagraph = re.exec(regularParagraph)[0]
+        return <p><i>{italicText}</i>{regularParagraph}</p>
+    }
 
     return (
         <SectionContainer id={link} placement={placement}>
