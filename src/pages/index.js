@@ -10,8 +10,9 @@ const HomePage = () => (
     <PageBase>
         <SEO title="Matheus Bernardes" />
         <HeroSection />
+        <AboutSection/>
+
         <FeatureToggle disabled>
-            <AboutSection/>
             <PortfolioSection/>
         </FeatureToggle>
     </PageBase>
