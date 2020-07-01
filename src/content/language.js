@@ -29,59 +29,82 @@ const langs = {
         },
         portfolio: {
             "title": "Portfólio",
-            "projects": [
-                {
-                    "title": "Beer Bank",
-                    "description": "UI developed to display beer data from PunkAPI",
-                    "itemsTitle": "Development tools",
-                    "items": ["React", "Material UI", "Fetch API", "Local Storage API"],
-                    "links": [
-                        {
-                            "title": "Deployed website",
-                            "url": "https://mbernardes19.github.io/beer-bank/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/beer-bank"
-                        }
-                    ]
-                },
-                {
-                    "title": "NG-Pokédex",
-                    "description": "",
-                    "itemsTitle": "",
-                    "items": [""],
-                    "links": [
-                        {
-                            "title": "Deployed web site",
-                            "url": "https://stackblitz.com/github/mbernardes19/ng-pokedex/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/ng-pokedex"
-                        }
-                    ]
-                },
-                {
-                    "title": "CobrinhaJS",
-                    "description": "",
-                    "itemsTitle": "",
-                    "items": [""],
-                    "links": [
-                        {
-                            "title": "Deployed web site",
-                            "url": "https://mbernardes19.github.io/cobrinha-js/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/cobrinha-js"
-                        }
-                    ]
-                }
-            ]
-        }
-    
-    },
+            "design": {
+                "title": "Design",
+                "projects": [
+                    {
+                        "title": "Beer Bank",
+                        "description": "UI desenvolvida para mostrar e encontrar informações sobre cervejas vindas da PunkAPI.",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Site em produção",
+                                "url": "https://mbernardes19.github.io/beer-bank/"
+                            },
+                            {
+                                "title": "Código fonte",
+                                "url": "https://github.com/mbernardes19/beer-bank"
+                            }
+                        ]
+                    },
+                ]
+            },
+            "development": {
+                "title": "Desenvolvimento",
+                "projects": [
+                    {
+                        "title": "Beer Bank",
+                        "description": "UI desenvolvida para mostrar e encontrar informações sobre cervejas vindas da PunkAPI.",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Site em produção",
+                                "url": "https://mbernardes19.github.io/beer-bank/"
+                            },
+                            {
+                                "title": "Código fonte",
+                                "url": "https://github.com/mbernardes19/beer-bank"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "NG-Pokédex",
+                        "description": "UI de uma Pokédex usando scroll infinito feita usando dados da PokéAPI.",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["Angular 7", "Material UI", "Fetch API"],
+                        "links": [
+                            {
+                                "title": "Deployed web site",
+                                "url": "https://stackblitz.com/github/mbernardes19/ng-pokedex/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/ng-pokedex"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CobrinhaJS",
+                        "description": "Jogo desenvolvido usando puramente Vanilla JS para treinar habilidades de JS sem depender de frameworks. Peso total: 12.6 kB.",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["JavaScript", "HTML", "CSS", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Deployed web site",
+                                "url": "https://mbernardes19.github.io/cobrinha-js/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/cobrinha-js"
+                            }
+                        ]
+                    }
+                ]
+            }
+    }
+},
     en: {
         messages: {
             emailCopied: "Email copied!"
@@ -111,56 +134,80 @@ const langs = {
         },
         portfolio: {
             "title": "Portfolio",
-            "projects": [
-                {
-                    "title": "Beer Bank",
-                    "description": "UI developed to display beer data from PunkAPI",
-                    "itemsTitle": "Development tools",
-                    "items": ["React", "Material UI", "Fetch API", "Local Storage API"],
-                    "links": [
-                        {
-                            "title": "Deployed website",
-                            "url": "https://mbernardes19.github.io/beer-bank/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/beer-bank"
-                        }
-                    ]
-                },
-                {
-                    "title": "NG-Pokédex",
-                    "description": "",
-                    "itemsTitle": "",
-                    "items": [""],
-                    "links": [
-                        {
-                            "title": "Deployed web site",
-                            "url": "https://stackblitz.com/github/mbernardes19/ng-pokedex/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/ng-pokedex"
-                        }
-                    ]
-                },
-                {
-                    "title": "CobrinhaJS",
-                    "description": "",
-                    "itemsTitle": "",
-                    "items": [""],
-                    "links": [
-                        {
-                            "title": "Deployed web site",
-                            "url": "https://mbernardes19.github.io/cobrinha-js/"
-                        },
-                        {
-                            "title": "Source code",
-                            "url": "https://github.com/mbernardes19/cobrinha-js"
-                        }
-                    ]
-                }
-            ]
+            "design": {
+                "title": "Design",
+                "projects": [
+                    {
+                        "title": "Beer Bank",
+                        "description": "UI developed to display beer data from PunkAPI",
+                        "itemsTitle": "Development tools",
+                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Deployed website",
+                                "url": "https://mbernardes19.github.io/beer-bank/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/beer-bank"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "development": {
+                "title": "Development",
+                "projects": [
+                    {
+                        "title": "Beer Bank",
+                        "description": "UI developed to display beer data from PunkAPI",
+                        "itemsTitle": "Development tools",
+                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Deployed website",
+                                "url": "https://mbernardes19.github.io/beer-bank/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/beer-bank"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "NG-Pokédex",
+                        "description": "UI of a Pokédex with infite scroll using data from PokéAPI.",
+                        "itemsTitle": "Development tools",
+                        "items": ["Angular 7", "Material UI", "Fetch API"],
+                        "links": [
+                            {
+                                "title": "Deployed web site",
+                                "url": "https://stackblitz.com/github/mbernardes19/ng-pokedex/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/ng-pokedex"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "CobrinhaJS",
+                        "description": "Game developed using purely VanillaJS to practice skills with JS without frameworks. Total size: 12.6 kB.",
+                        "itemsTitle": "Development tools",
+                        "items": ["JavaScript", "HTML", "CSS", "GitHub Pages"],
+                        "links": [
+                            {
+                                "title": "Deployed web site",
+                                "url": "https://mbernardes19.github.io/cobrinha-js/"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/cobrinha-js"
+                            }
+                        ]
+                    }
+                ]
+            }
         }
     }
 }

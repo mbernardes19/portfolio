@@ -7,7 +7,7 @@ import LanguageRounded from '@material-ui/icons/LanguageRounded';
 
 
 export default function PortfolioSectionItem({content, image}) {
-    const ProjectImage = () => image;
+    const ProjectImage = () => image ? image : "";
     
     const PrimaryButton = ({link, children}) => (
         <Button
