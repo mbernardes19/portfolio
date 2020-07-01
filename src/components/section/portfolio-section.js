@@ -15,9 +15,18 @@ export default function PorfolioSection() {
   const { currentLang } = useContext(LanguageContext);
   const { portfolio } = currentLang;
 
-  const { allImageSharp } = useStaticQuery(graphql`
+  const projectsImages = useStaticQuery(graphql`
     query {
-      allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/project/"}}}) {
+      designImages: allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/des/"}}}) {
+        edges {
+          node {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      devImages: allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/dev/"}}}) {
         edges {
           node {
             fluid(maxWidth: 400) {
@@ -28,6 +37,7 @@ export default function PorfolioSection() {
       }
     }
   `)
+
     const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
@@ -50,16 +60,16 @@ export default function PorfolioSection() {
         <div>
             <TabPanel value={value} index={0}>
               {
-                allImageSharp.edges.map((edge, index) => (
+                projectsImages.designImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
                     content={portfolio.design.projects[0]}
-                  />
+                    image={<Img fluid={edge.node.fluid}/>} />
                 ))
               }
             </TabPanel>
             <TabPanel value={value} index={1}>
               {
-                allImageSharp.edges.map((edge, index) => (
+                projectsImages.devImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
                     content={portfolio.development.projects[index]}
                     image={<Img fluid={edge.node.fluid} />} />
