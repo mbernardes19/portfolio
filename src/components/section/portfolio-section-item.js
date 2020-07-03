@@ -62,9 +62,9 @@ export default function PortfolioSectionItem({content, image}) {
 
 const ProjectContainer = styled.article`
     display: grid;
-    grid-template-rows: .3fr 1fr;
+    grid-template-rows: .3fr .3fr;
     grid-row-gap: 2rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4rem;
     width: 100%;
 `;
 
