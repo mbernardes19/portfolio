@@ -78,11 +78,11 @@ const langs = {
                         "items": ["Angular 7", "Material UI", "Fetch API"],
                         "links": [
                             {
-                                "title": "Deployed web site",
+                                "title": "Site em produção",
                                 "url": "https://stackblitz.com/github/mbernardes19/ng-pokedex/"
                             },
                             {
-                                "title": "Source code",
+                                "title": "Código fonte",
                                 "url": "https://github.com/mbernardes19/ng-pokedex"
                             }
                         ]
@@ -94,11 +94,11 @@ const langs = {
                         "items": ["JavaScript", "HTML", "CSS", "GitHub Pages"],
                         "links": [
                             {
-                                "title": "Deployed web site",
+                                "title": "Site em produção",
                                 "url": "https://mbernardes19.github.io/cobrinha-js/"
                             },
                             {
-                                "title": "Source code",
+                                "title": "Código fonte",
                                 "url": "https://github.com/mbernardes19/cobrinha-js"
                             }
                         ]
