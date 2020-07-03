@@ -14,9 +14,9 @@ const Header = () => {
     <Navigator>
         <NavLink title={home.title} to="/" />
         <NavLink title={about.title} to="/#about" />
-        <FeatureToggle disabled>
         <NavLink title={portfolio.title} to="/#portfolio" />
-        <NavLink title={blog.title} to="/#blog" />
+        <FeatureToggle disabled>
+          <NavLink title={blog.title} to="/#blog" />
         </FeatureToggle>
     </Navigator>
     <LanguageToggle setCurrentLanguage={setCurrentLang}/>
