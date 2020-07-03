@@ -33,20 +33,22 @@ const langs = {
                 "title": "Design",
                 "projects": [
                     {
-                        "title": "Beer Bank",
-                        "description": "UI desenvolvida para mostrar e encontrar informações sobre cervejas vindas da PunkAPI.",
+                        "title": "Amazo Lunch",
+                        "description": "Identidade visual e panfleto feito para lanchonete",
                         "itemsTitle": "Ferramentas de desenvolvimento",
-                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
-                        "links": [
-                            {
-                                "title": "Site em produção",
-                                "url": "https://mbernardes19.github.io/beer-bank/"
-                            },
-                            {
-                                "title": "Código fonte",
-                                "url": "https://github.com/mbernardes19/beer-bank"
-                            }
-                        ]
+                        "items": ["Illustrator"],
+                    },
+                    {
+                        "title": "Vem Comigo",
+                        "description": "Logo criada para canal de Youtube",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["Photoshop"],
+                    },
+                    {
+                        "title": "722 Choperia",
+                        "description": "Postagem de Facebook e Instagram criada para dia dos namorados",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["Photoshop"],
                     },
                 ]
             },
@@ -138,21 +140,23 @@ const langs = {
                 "title": "Design",
                 "projects": [
                     {
-                        "title": "Beer Bank",
-                        "description": "UI developed to display beer data from PunkAPI",
+                        "title": "Amazo Lunch",
+                        "description": "Branding and flyer made for a fast food restaurant",
                         "itemsTitle": "Development tools",
-                        "items": ["React", "Material UI", "Fetch API", "Local Storage API", "GitHub Pages"],
-                        "links": [
-                            {
-                                "title": "Deployed website",
-                                "url": "https://mbernardes19.github.io/beer-bank/"
-                            },
-                            {
-                                "title": "Source code",
-                                "url": "https://github.com/mbernardes19/beer-bank"
-                            }
-                        ]
-                    }
+                        "items": ["Illustrator"],
+                    },
+                    {
+                        "title": "Vem Comigo",
+                        "description": "Logo made for a Youtube channel",
+                        "itemsTitle": "Development tools",
+                        "items": ["Photoshop"],
+                    },
+                    {
+                        "title": "722 Choperia",
+                        "description": "Facebook and Instagram post made for the Brazilian Valentine's Day",
+                        "itemsTitle": "Development tools",
+                        "items": ["Photoshop"],
+                    },
                 ]
             },
             "development": {
