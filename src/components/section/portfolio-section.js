@@ -10,6 +10,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import TabPanel from '../tab/tabpanel';
 import LanguageContext from '../../content/language-context';
+import { withStyles } from '@material-ui/core/styles';
 
 export default function PorfolioSection() {
   const { currentLang } = useContext(LanguageContext);
@@ -44,15 +45,21 @@ export default function PorfolioSection() {
         setValue(newValue);
     };
 
+    const PortfolioSectionTabs = withStyles({
+      indicator: {
+        backgroundColor: 'rgb(255, 144, 0)',
+      },
+    })(Tabs);
+
     const PortfolioSectionHeader = () => (
-        <SectionHeader>
-            <SectionTitle>{portfolio.title}</SectionTitle>
-        <AppBar position="static" color="default">
-            <Tabs value={value} onChange={handleChange}>
-                <Tab label={portfolio.design.title} />
-                <Tab label={portfolio.development.title} />
-            </Tabs>
-        </AppBar>
+            <SectionHeader>
+              <SectionTitle>{portfolio.title}</SectionTitle>
+              <AppBar position="static" color="default">
+                <PortfolioSectionTabs value={value} onChange={handleChange}>
+                    <Tab label={portfolio.design.title} />
+                    <Tab label={portfolio.development.title} />
+                </PortfolioSectionTabs>
+              </AppBar>
         </SectionHeader>
     );
 
@@ -62,8 +69,10 @@ export default function PorfolioSection() {
               {
                 projectsImages.designImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
-                    content={portfolio.design.projects[0]}
-                    image={<Img fluid={edge.node.fluid}/>} />
+                    content={portfolio.design.projects[index]}
+                    image={<Img fluid={edge.node.fluid}/>}
+                    type="design" 
+                  />                    
                 ))
               }
             </TabPanel>
@@ -72,7 +81,9 @@ export default function PorfolioSection() {
                 projectsImages.devImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
                     content={portfolio.development.projects[index]}
-                    image={<Img fluid={edge.node.fluid} />} />
+                    image={<Img fluid={edge.node.fluid} />}
+                    type="development"  
+                  />
                 ))
               }
             </TabPanel>

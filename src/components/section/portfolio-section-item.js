@@ -4,24 +4,24 @@ import Button from '@material-ui/core/Button';
 import CodeRounded from '@material-ui/icons/CodeRounded';
 import LanguageRounded from '@material-ui/icons/LanguageRounded';
 
-
-
-export default function PortfolioSectionItem({content, image}) {
+export default function PortfolioSectionItem({type, content, image}) {
     const ProjectImage = () => image ? image : "";
-    
-    const PrimaryButton = ({link, children}) => (
-        <Button
-            style={{backgroundColor: '#ff9000', marginRight: '1.3rem', color: 'white'}}
-            variant="contained"
-            startIcon={<LanguageRounded/>}
-        >
-            <a href={link} target="_blank">{children}</a>
-        </Button>
-    );
+
+    const PrimaryButton = ({link, children}) => {
+        return (
+            <Button
+                style={{backgroundColor: '#ff9000', marginTop: '1.1rem', marginRight: '1.3rem', color: 'white'}}
+                variant="contained"
+                startIcon={<LanguageRounded/>}
+            >
+                <a href={link} target="_blank">{children}</a>
+            </Button>
+        )
+    };
     
     const SecondaryButton = ({link, children}) => (
         <Button
-            style={{backgroundColor: '#3A53A5', borderColor: '#f5f5f5', color: 'white'}}
+            style={{backgroundColor: '#3A53A5', marginTop: '1.1rem', borderColor: '#f5f5f5', color: 'white'}}
             variant="outlined"
             startIcon={<CodeRounded/>}
         >
@@ -51,9 +51,10 @@ export default function PortfolioSectionItem({content, image}) {
                     <ProjectTopics>
                         {showProjectTopics()}
                     </ProjectTopics>
-                    <ProjectLinks>
-                        {showProjectLinks()}
-                    </ProjectLinks>
+                    { 
+                        type === 'development' ? 
+                            <ProjectLinks> {showProjectLinks()} </ProjectLinks> : <NoProjectLinks />
+                    }
                 </ProjectTopicsContainer>
             </ProjectBodyContainer>
         </ProjectContainer>
@@ -89,9 +90,13 @@ const ProjectTopicsContainer = styled.div`
 `;
 
 const ProjectTopics = styled.ul`
+    margin-bottom: 0px;
 `;
 
 const ProjectLinks = styled.div`
+`;
+
+const NoProjectLinks = styled.div`
 `;
 
 const ProjectTopicsTitle = styled.h4`
@@ -99,26 +104,4 @@ const ProjectTopicsTitle = styled.h4`
 `;
 
 const ProjectTopic = styled.li`
-`;
-
-const PrimaryLinkButton = styled.button`
-    border-radius: 6px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ff9000;
-    padding: 5px 15px;
-    margin-right: 1rem;
-    font-size: .8rem;
-    background-color: #ff9000
-`;
-
-const SecondaryLinkButton = styled.button`
-    border-radius: 6px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #f5f5f5;
-    padding: 5px 15px;
-    margin-right: 1rem;
-    font-size: .8rem;
-    background-color: #3A53A5
 `;
