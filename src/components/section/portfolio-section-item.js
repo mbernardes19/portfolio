@@ -1,15 +1,15 @@
-import React, { Suspense } from 'react';
+import React, {lazy} from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import CodeRounded from '@material-ui/icons/CodeRounded';
 import LanguageRounded from '@material-ui/icons/LanguageRounded';
-import Gif from '../../images/dev-telegram-bot.gif';
-import GifPlayer from 'react-gif-player'
-import './gifplayer.css'
+const PortfolioGifPlayerLazy = lazy(() => import('./PortfolioGifPlayer'));
 
 export default function PortfolioSectionItem({type, content, image}) {
+    const isSSR = typeof window === "undefined"
+
     const ProjectImage = () => {
-        return content.hasGif ? <GifPlayer gif={Gif} style={{maxWidth: '100%', minWidth: '30%', width: '300px'}} /> : image;
+        return content.hasGif ? !isSSR ? <React.Suspense fallback={<div />}> <PortfolioGifPlayerLazy/> </React.Suspense> : <></> : image;
     }
 
     const PrimaryButton = ({link, children}) => {
