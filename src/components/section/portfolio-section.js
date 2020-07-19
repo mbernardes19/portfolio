@@ -56,8 +56,8 @@ export default function PorfolioSection() {
               <SectionTitle>{portfolio.title}</SectionTitle>
               <AppBar position="static" color="default">
                 <PortfolioSectionTabs value={value} onChange={handleChange}>
-                    <Tab label={portfolio.design.title} />
                     <Tab label={portfolio.development.title} />
+                    <Tab label={portfolio.design.title} />
                 </PortfolioSectionTabs>
               </AppBar>
         </SectionHeader>
@@ -67,22 +67,22 @@ export default function PorfolioSection() {
         <div>
             <TabPanel value={value} index={0}>
               {
-                projectsImages.designImages.edges.map((edge, index) => (
+                projectsImages.devImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
-                    content={portfolio.design.projects[index]}
+                    content={portfolio.development.projects[index]}
                     image={<Img fluid={edge.node.fluid}/>}
-                    type="design" 
+                    type="development" 
                   />                    
                 ))
               }
             </TabPanel>
             <TabPanel value={value} index={1}>
               {
-                projectsImages.devImages.edges.map((edge, index) => (
+                projectsImages.designImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
-                    content={portfolio.development.projects[index]}
+                    content={portfolio.design.projects[index]}
                     image={<Img fluid={edge.node.fluid} />}
-                    type="development"  
+                    type="design"  
                   />
                 ))
               }
