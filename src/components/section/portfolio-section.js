@@ -67,9 +67,15 @@ export default function PorfolioSection() {
         <div>
             <TabPanel value={value} index={0}>
               {
+                <PortfolioSectionItem
+                  content={portfolio.development.projects[0]} 
+                  type="development"
+                />
+              }
+              {
                 projectsImages.devImages.edges.map((edge, index) => (
                   <PortfolioSectionItem
-                    content={portfolio.development.projects[index]}
+                    content={portfolio.development.projects[index+1]}
                     image={<Img fluid={edge.node.fluid}/>}
                     type="development" 
                   />                    
