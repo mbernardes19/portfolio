@@ -56,6 +56,24 @@ const langs = {
                 "title": "Desenvolvimento",
                 "projects": [
                     {
+                        "title": "Bot Método Sempre Rico",
+                        "description": "Bot de Telegram desenvolvido para o curso 'Método Sempre Rico'. Uma das funções do bot é confirmar que a compra do usuário foi finalizada com sucesso, armazenar seus dados e dar acesso aos canais privados do curso. A outra função é a de enviar relatórios diários sobre os usuários do curso por email, e fazer checagens mensais nos canais para banir usuários inadimplentes.",
+                        "itemsTitle": "Ferramentas de desenvolvimento",
+                        "items": ["Node", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "Serviço de Hospedagem KingHost"],
+                        "links": [
+                            {
+                                "title": "Bot em produção",
+                                "url": "https://t.me/metodo_sempre_rico"
+                            },
+                            {
+                                "title": "Código fonte",
+                                "url": "https://github.com/mbernardes19/metodo-semprerico-bot"
+                            }
+                        ],
+                        "hasGif": true,
+                        "gif": "../../images/dev-telegram-bot.gif"
+                    },
+                    {
                         "title": "Beer Bank",
                         "description": "UI desenvolvida para mostrar e encontrar informações sobre cervejas vindas da PunkAPI.",
                         "itemsTitle": "Ferramentas de desenvolvimento",
@@ -144,24 +162,48 @@ const langs = {
                         "description": "Branding and flyer made for a fast food restaurant",
                         "itemsTitle": "Development tools",
                         "items": ["Illustrator"],
+                        "hasGif": false,
+                        "gif":""
                     },
                     {
                         "title": "Vem Comigo",
                         "description": "Logo made for a Youtube channel",
                         "itemsTitle": "Development tools",
                         "items": ["Photoshop"],
+                        "hasGif": false,
+                        "gif":""
                     },
                     {
                         "title": "722 Choperia",
                         "description": "Facebook and Instagram post made for the Brazilian Valentine's Day",
                         "itemsTitle": "Development tools",
                         "items": ["Photoshop"],
+                        "hasGif": false,
+                        "gif":""
                     },
                 ]
             },
             "development": {
                 "title": "Development",
                 "projects": [
+                    {
+                        "title": "Bot Método Sempre Rico",
+                        "description": "Telegram bot developed for the 'Método Sempre Rico' course. One of its job is to confirm that the user's purchase has been successfully accomplished, then to store their data and to give them access to the course's private channels. The other job is to send daily reports through email about the course's users and to make monthly checks on the channels in order to ban defaulting users.",
+                        "itemsTitle": "Development tools",
+                        "items": ["Node", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "KingHost Hosting Service"],
+                        "links": [
+                            {
+                                "title": "Deployed bot",
+                                "url": "https://t.me/metodo_sempre_rico"
+                            },
+                            {
+                                "title": "Source code",
+                                "url": "https://github.com/mbernardes19/metodo-semprerico-bot"
+                            }
+                        ],
+                        "hasGif": true,
+                        "gif":""
+                    },
                     {
                         "title": "Beer Bank",
                         "description": "UI developed to display beer data from PunkAPI",
@@ -176,7 +218,9 @@ const langs = {
                                 "title": "Source code",
                                 "url": "https://github.com/mbernardes19/beer-bank"
                             }
-                        ]
+                        ],
+                        "hasGif": false,
+                        "gif":""
                     },
                     {
                         "title": "NG-Pokédex",
@@ -192,7 +236,9 @@ const langs = {
                                 "title": "Source code",
                                 "url": "https://github.com/mbernardes19/ng-pokedex"
                             }
-                        ]
+                        ],
+                        "hasGif": false,
+                        "gif":""
                     },
                     {
                         "title": "CobrinhaJS",
@@ -208,7 +254,9 @@ const langs = {
                                 "title": "Source code",
                                 "url": "https://github.com/mbernardes19/cobrinha-js"
                             }
-                        ]
+                        ],
+                        "hasGif": false,
+                        "gif":""
                     }
                 ]
             }
