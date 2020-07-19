@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import CodeRounded from '@material-ui/icons/CodeRounded';
 import LanguageRounded from '@material-ui/icons/LanguageRounded';
+import Gif from '../../images/dev-telegram-bot.gif';
 
 export default function PortfolioSectionItem({type, content, image}) {
-    const ProjectImage = () => image ? image : "";
+    const ProjectImage = () => {
+        return content.hasGif ? <img src={Gif} /> : image;
+    }
 
     const PrimaryButton = ({link, children}) => {
         return (
@@ -40,7 +43,7 @@ export default function PortfolioSectionItem({type, content, image}) {
 
     return (
         <ProjectContainer>
-            <ProjectImageContainer>
+            <ProjectImageContainer gif={content.hasGif}>
                 <ProjectImage/>
             </ProjectImageContainer>
             <ProjectBodyContainer>
@@ -70,6 +73,8 @@ const ProjectContainer = styled.article`
 `;
 
 const ProjectImageContainer = styled.div`
+    display: ${props => props.gif ? 'flex' : 'inherit'};
+    justify-content: ${props => props.gif ? 'center' : 'inherit'};
 `;
 
 const ProjectBodyContainer = styled.div`
