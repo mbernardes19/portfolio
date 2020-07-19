@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import CodeRounded from '@material-ui/icons/CodeRounded';
 import LanguageRounded from '@material-ui/icons/LanguageRounded';
-const PortfolioGifPlayerLazy = lazy(() => import('./PortfolioGifPlayer'));
+import PortfolioGif from './PortfolioGif';
 
 export default function PortfolioSectionItem({type, content, image}) {
-    const isSSR = typeof window === "undefined"
 
     const ProjectImage = () => {
-        return content.hasGif ? !isSSR ? <React.Suspense fallback={<div />}> <PortfolioGifPlayerLazy/> </React.Suspense> : <></> : image;
+        return content.hasGif ? <PortfolioGif /> : image;
     }
 
     const PrimaryButton = ({link, children}) => {
@@ -83,7 +82,7 @@ const ProjectBodyContainer = styled.div`
 `;
 
 const ProjectTitle = styled.h3`
-    margin-bottom: 0;
+    margin-bottom: 5px;
     font-size: 2rem;
 
 `;

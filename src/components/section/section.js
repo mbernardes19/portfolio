@@ -41,7 +41,6 @@ export const SectionContainer = styled.section`
 
 export const SectionHeader = styled.header`
     display: flex;
-    margin-bottom: 10px;
     flex-flow: column wrap;
     font-size: ${props => props.fontSize};
     align-items: ${props => props.center ? 'center' : props.left ? 'flex-start' : props.right ? 'flex-end' : ''}
