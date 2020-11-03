@@ -7,7 +7,7 @@ import LanguageContext from '../content/language-context';
 import lang from '../content/language';
 
 const PageBase = ({ children }) => {
-  const [currentLang, setCurrentLang] = useState(lang.ptBr);
+  const [currentLang, setCurrentLang] = useState(lang.en);
 
   const value = {currentLang, setCurrentLang}
   
