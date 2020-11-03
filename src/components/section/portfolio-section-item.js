@@ -23,9 +23,9 @@ export default function PortfolioSectionItem({type, content, image}) {
         )
     };
     
-    const SecondaryButton = ({link, children}) => (
+    const SecondaryButton = ({link, children, style}) => (
         <Button
-            style={{backgroundColor: '#3A53A5', marginTop: '1.1rem', borderColor: '#f5f5f5', color: 'white'}}
+            style={{backgroundColor: '#3A53A5', marginTop: '1.1rem', borderColor: '#f5f5f5', color: 'white', ...style}}
             variant="outlined"
             startIcon={<CodeRounded/>}
         >
@@ -38,7 +38,13 @@ export default function PortfolioSectionItem({type, content, image}) {
     const showProjectLinks = () => (
         <div>
             <PrimaryButton link={content.links[0].url}>{content.links[0].title.toUpperCase()}</PrimaryButton>
-            <SecondaryButton link={content.links[1].url}>{content.links[1].title.toUpperCase()}</SecondaryButton>
+            <SecondaryButton style={{marginRight: '1rem'}} link={content.links[1].url}>{content.links[1].title.toUpperCase()}</SecondaryButton>
+            {
+                content.links[2] ?
+                    <SecondaryButton link={content.links[2].url}>{content.links[2].title.toUpperCase()}</SecondaryButton>
+                :
+                    <></>
+            }
         </div>
     );
 

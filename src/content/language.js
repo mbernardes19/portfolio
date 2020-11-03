@@ -29,29 +29,6 @@ const langs = {
         },
         portfolio: {
             "title": "Portfólio",
-            "design": {
-                "title": "Design",
-                "projects": [
-                    {
-                        "title": "Amazo Lunch",
-                        "description": "Identidade visual e panfleto feito para lanchonete",
-                        "itemsTitle": "Ferramentas de desenvolvimento",
-                        "items": ["Illustrator"],
-                    },
-                    {
-                        "title": "Vem Comigo",
-                        "description": "Logo criada para canal de Youtube",
-                        "itemsTitle": "Ferramentas de desenvolvimento",
-                        "items": ["Photoshop"],
-                    },
-                    {
-                        "title": "722 Choperia",
-                        "description": "Postagem de Facebook e Instagram criada para dia dos namorados",
-                        "itemsTitle": "Ferramentas de desenvolvimento",
-                        "items": ["Photoshop"],
-                    },
-                ]
-            },
             "development": {
                 "title": "Desenvolvimento",
                 "projects": [
@@ -154,43 +131,36 @@ const langs = {
         },
         portfolio: {
             "title": "Portfolio",
-            "design": {
-                "title": "Design",
-                "projects": [
-                    {
-                        "title": "Amazo Lunch",
-                        "description": "Branding and flyer made for a fast food restaurant",
-                        "itemsTitle": "Development tools",
-                        "items": ["Illustrator"],
-                        "hasGif": false,
-                        "gif":""
-                    },
-                    {
-                        "title": "Vem Comigo",
-                        "description": "Logo made for a Youtube channel",
-                        "itemsTitle": "Development tools",
-                        "items": ["Photoshop"],
-                        "hasGif": false,
-                        "gif":""
-                    },
-                    {
-                        "title": "722 Choperia",
-                        "description": "Facebook and Instagram post made for the Brazilian Valentine's Day",
-                        "itemsTitle": "Development tools",
-                        "items": ["Photoshop"],
-                        "hasGif": false,
-                        "gif":""
-                    },
-                ]
-            },
             "development": {
                 "title": "Development",
                 "projects": [
                     {
+                        "title": "Plasser Orders System",
+                        "description": "Web system used by Plasser company's clients as a way to monitor their orders statuses.",
+                        "itemsTitle": "Development tools",
+                        "items": ["NodeJS", "NestJS (React)", "NextJS", "TypeORM", "MySQL", "Typescript"],
+                        "links": [
+                            {
+                                "title": "Deployed website",
+                                "url": "https://sistema-dados-ui.vercel.app"
+                            },
+                            {
+                                "title": "UI Code",
+                                "url": "https://github.com/mbernardes19/sistema-dados-ui"
+                            },
+                            {
+                                "title": "API Code",
+                                "url": "https://github.com/mbernardes19/sistema-dados-api"
+                            }
+                        ],
+                        "hasGif": false,
+                        "gif": ""
+                    },
+                    {
                         "title": "Bot Método Sempre Rico",
                         "description": "Telegram bot developed for the 'Método Sempre Rico' course. One of its job is to confirm that the user's purchase has been successfully accomplished, then to store their data and to give them access to the course's private channels. The other job is to send daily reports through email about the course's users and to make monthly checks on the channels in order to ban defaulting users.",
                         "itemsTitle": "Development tools",
-                        "items": ["Node", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "KingHost Hosting Service"],
+                        "items": ["NodeJS", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "KingHost Hosting Service"],
                         "links": [
                             {
                                 "title": "Deployed bot",

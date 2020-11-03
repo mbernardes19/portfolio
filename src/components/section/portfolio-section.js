@@ -18,15 +18,6 @@ export default function PorfolioSection() {
 
   const projectsImages = useStaticQuery(graphql`
     query {
-      designImages: allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/des/"}}}) {
-        edges {
-          node {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
       devImages: allImageSharp(sort: {order: ASC, fields: fixed___originalName}, filter: {sizes: {originalName: {regex: "/dev/"}}}) {
         edges {
           node {
@@ -61,19 +52,24 @@ export default function PorfolioSection() {
         <div>
             <TabPanel value={value} index={0}>
               {
-                <PortfolioSectionItem
-                  content={portfolio.development.projects[0]} 
-                  type="development"
-                />
-              }
-              {
-                projectsImages.devImages.edges.map((edge, index) => (
-                  <PortfolioSectionItem
-                    content={portfolio.development.projects[index+1]}
-                    image={<Img fluid={edge.node.fluid}/>}
-                    type="development" 
-                  />                    
-                ))
+                projectsImages.devImages.edges.map((edge, index) => {
+                  const {hasGif} = portfolio.development.projects[index];
+                  if (hasGif) {
+                    return (
+                      <PortfolioSectionItem
+                        content={portfolio.development.projects[index]} 
+                        type="development"
+                      />
+                    )
+                  }
+                  return (
+                    <PortfolioSectionItem
+                      content={portfolio.development.projects[index]}
+                      image={<Img fluid={edge.node.fluid}/>}
+                      type="development" 
+                    />
+                  )
+                })
               }
             </TabPanel>
       </div>
