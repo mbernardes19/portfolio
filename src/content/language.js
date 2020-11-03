@@ -33,6 +33,28 @@ const langs = {
                 "title": "Desenvolvimento",
                 "projects": [
                     {
+                        "title": "Sistema de Pedidos da Plasser",
+                        "description": "Sistema web usado pelos clientes da Plasser como forma de monitorar o status de seus pedidos. Todos os dados do sistema são preenchidos e atualizados por meio de planilhas exportadas pelo sistema principal da empresa.",
+                        "itemsTitle": "Development tools",
+                        "items": ["NodeJS", "NestJS", "NextJS (React)", "TypeORM", "MySQL", "Typescript", "ExcelJS"],
+                        "links": [
+                            {
+                                "title": "Deployed website",
+                                "url": "https://sistema-dados-ui.vercel.app"
+                            },
+                            {
+                                "title": "Código UI",
+                                "url": "https://github.com/mbernardes19/sistema-dados-ui"
+                            },
+                            {
+                                "title": "Código API",
+                                "url": "https://github.com/mbernardes19/sistema-dados-api"
+                            }
+                        ],
+                        "hasGif": false,
+                        "gif": ""
+                    },
+                    {
                         "title": "Bot Método Sempre Rico",
                         "description": "Bot de Telegram desenvolvido para o curso 'Método Sempre Rico'. Uma das funções do bot é confirmar que a compra do usuário foi finalizada com sucesso, armazenar seus dados e dar acesso aos canais privados do curso. A outra função é a de enviar relatórios diários sobre os usuários do curso por email, e fazer checagens mensais nos canais para banir usuários inadimplentes.",
                         "itemsTitle": "Ferramentas de desenvolvimento",
@@ -136,9 +158,9 @@ const langs = {
                 "projects": [
                     {
                         "title": "Plasser Orders System",
-                        "description": "Web system used by Plasser company's clients as a way to monitor their orders statuses.",
+                        "description": "Web system used by Plasser company's clients as a way to monitor their orders statuses. All the system data is populated and updated by spreadsheets exported by the company's main system.",
                         "itemsTitle": "Development tools",
-                        "items": ["NodeJS", "NestJS (React)", "NextJS", "TypeORM", "MySQL", "Typescript"],
+                        "items": ["NodeJS", "NestJS", "NextJS (React)", "TypeORM", "MySQL", "Typescript", "ExcelJS"],
                         "links": [
                             {
                                 "title": "Deployed website",
