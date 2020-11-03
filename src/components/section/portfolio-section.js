@@ -54,12 +54,6 @@ export default function PorfolioSection() {
     const PortfolioSectionHeader = () => (
             <SectionHeader>
               <SectionTitle>{portfolio.title}</SectionTitle>
-              <AppBar position="static" color="default">
-                <PortfolioSectionTabs value={value} onChange={handleChange}>
-                    <Tab label={portfolio.development.title} />
-                    <Tab label={portfolio.design.title} />
-                </PortfolioSectionTabs>
-              </AppBar>
         </SectionHeader>
     );
 
@@ -79,17 +73,6 @@ export default function PorfolioSection() {
                     image={<Img fluid={edge.node.fluid}/>}
                     type="development" 
                   />                    
-                ))
-              }
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              {
-                projectsImages.designImages.edges.map((edge, index) => (
-                  <PortfolioSectionItem
-                    content={portfolio.design.projects[index]}
-                    image={<Img fluid={edge.node.fluid} />}
-                    type="design"  
-                  />
                 ))
               }
             </TabPanel>
