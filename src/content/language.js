@@ -11,8 +11,8 @@ const langs = {
             title: "Sobre",
             content: [
                 "*Carioca morando na terra da garoa.* Meu trabalho atualmente consiste de um papel full time como Consultor Desenvolvedor na ThoughtWorks, Mentor de Programação na Aceleradora Ágil e Desenvolvedor Web Freelance. Poder trabalhar em todas essas frentes é muito enriquecedor para mim como desenvolvedor pois me traz muita experiência em diversas ferramentas tecnológicas e áreas de negócio.",
-                "Em 2015 comecei a trabalhar como Designer Gráfico em uma agência de publicidade e com projetos freelance. Em 2019 consegui meu primeiro estágio como Desenvolvedor Frontend trabalhando com Angular diariamente. Hoje em dia tenho me dedicado ao React, React Native e Node para criar os produtos web de meus clientes.",
-                "Caso esteja em busca de um desenvolvedor/designer para construir o site, aplicativo, ou alguma peça de divulgação do seu negócio, me manda uma mensagem! Vamos trabalhar juntos ;)"
+                "Em 2019 consegui meu primeiro estágio como Desenvolvedor Frontend trabalhando com Angular diariamente. Hoje em dia tenho me dedicado ao React, React Native e Node para criar os produtos web de meus clientes.",
+                "Caso esteja em busca de um desenvolvedor para construir o site, sistema ou aplicativo do seu negócio, me manda uma mensagem! Vamos trabalhar juntos ;)"
             ]
         },
         blog: {},
@@ -134,9 +134,9 @@ const langs = {
         about: {
             title: "About",
             content: [
-                "*I'm from Rio de Janeiro, living in São Paulo, Brazil.* My work currently consists in a role of full time Consultant Developer at ThoughtWorks, Programming Mentor at Aceleradora Ágil and Freelance Web Developer. Being able to work in so many ways is really resourceful for me as a developer because it brings me experience in working with many developer tools and in many business domains.",
-                "In 2015 I began to work as a Graphic Designer in a marketing agency and with freelance projects as well. In 2019 I got my first internship as a Frontend Developer working with Angular on a daily basis. Today I've been mainly working with React, React Native and Node to create my client's web products",
-                "In case you're searching for a developer/designer to build a website, an app or any advertisement for your business, text me! Let's work together ;)"
+                "*I'm from Rio de Janeiro, living in São Paulo, Brazil.* My work currently consists in a full time role as Consultant Developer at ThoughtWorks, Programming Mentor at Aceleradora Ágil and Freelance Web Developer. Being able to work in so many ways is really resourceful for me as a developer because it brings me experience in working with many developer tools and in many business domains.",
+                "In 2019 I got my first internship as a Frontend Developer working with Angular on a daily basis. Today I've been mainly working with React, React Native and Node to create my client's web products",
+                "If you're searching for a developer to build a website, system or an app for your business, text me! Let's work together ;)"
             ]
         },
         blog: {},
