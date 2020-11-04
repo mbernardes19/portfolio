@@ -56,9 +56,9 @@ const langs = {
                     },
                     {
                         "title": "Bot Método Sempre Rico",
-                        "description": "Bot de Telegram desenvolvido para o curso 'Método Sempre Rico'. Uma das funções do bot é confirmar que a compra do usuário foi finalizada com sucesso, armazenar seus dados e dar acesso aos canais privados do curso. A outra função é a de enviar relatórios diários sobre os usuários do curso por email, e fazer checagens mensais nos canais para banir usuários inadimplentes.",
+                        "description": "Bot de Telegram desenvolvido para o curso 'Método Sempre Rico'. Uma das funções do bot é confirmar que a compra do usuário foi finalizada com sucesso, armazenar seus dados e dar acesso aos canais privados do curso. A outra função é a de enviar relatórios diários sobre os usuários do curso por email, e fazer checagens mensais nos canais para banir usuários inadimplentes. UPDATE: Agora ele tem uma integração com a DerivAPI (Binary) que faz com que ele cheque por wins/losses de sinais forex e respondê-las em canais de Telegram.",
                         "itemsTitle": "Ferramentas de desenvolvimento",
-                        "items": ["Node", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "Serviço de Hospedagem KingHost"],
+                        "items": ["Node", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "DerivAPI", "Serviço de Hospedagem KingHost"],
                         "links": [
                             {
                                 "title": "Bot em produção",
@@ -180,9 +180,9 @@ const langs = {
                     },
                     {
                         "title": "Bot Método Sempre Rico",
-                        "description": "Telegram bot developed for the 'Método Sempre Rico' course. One of its job is to confirm that the user's purchase has been successfully accomplished, then to store their data and to give them access to the course's private channels. The other job is to send daily reports through email about the course's users and to make monthly checks on the channels in order to ban defaulting users.",
+                        "description": "Telegram bot developed for the 'Método Sempre Rico' course. One of its job is to confirm that the user's purchase has been successfully accomplished, then to store their data and to give them access to the course's private channels. The other job is to send daily reports through email about the course's users and to make monthly checks on the channels in order to ban defaulting users. UPDATE: Now it has an integration with DerivAPI (Binary) that makes it check for wins/losses of forex signals and reply it on Telegram channels.",
                         "itemsTitle": "Development tools",
-                        "items": ["NodeJS", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "KingHost Hosting Service"],
+                        "items": ["NodeJS", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "DerivAPI", "KingHost Hosting Service"],
                         "links": [
                             {
                                 "title": "Deployed bot",
