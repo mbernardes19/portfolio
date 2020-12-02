@@ -15,11 +15,13 @@ const langs = {
                 "Caso esteja em busca de um desenvolvedor para construir o site, sistema ou aplicativo do seu negócio, me manda uma mensagem! Vamos trabalhar juntos ;)"
             ]
         },
-        blog: {},
+        blog: {
+            title: "Blog"
+        },
         hero: {
             "greeting": "Oi, meu nome é",
             "name": "Matheus",
-            "content": "Sou Desenvolvedor Web, também atuo como Designer Gráfico, e dou aulas de programação."
+            "content": "Sou Desenvolvedor Web e um Artesão de Software também."
         },
         navLinks: {
             "home": "Home",
@@ -139,11 +141,13 @@ const langs = {
                 "If you're searching for a developer to build a website, system or an app for your business, text me! Let's work together ;)"
             ]
         },
-        blog: {},
+        blog: {
+            title: "Blog"
+        },
         hero: {
             greeting: "Hi, I'm",
             name: "Matheus",
-            content: "I'm a Web Developer, I also work as a Graphic Designer and I teach programming."
+            content: "I'm a Web Developer and a Software Craftsman as well"
         },
         navLinks: {
             home: "Home",
@@ -179,7 +183,7 @@ const langs = {
                         "gif": ""
                     },
                     {
-                        "title": "Bot Método Sempre Rico",
+                        "title": "Método Sempre Rico Bot",
                         "description": "Telegram bot developed for the 'Método Sempre Rico' course. One of its job is to confirm that the user's purchase has been successfully accomplished, then to store their data and to give them access to the course's private channels. The other job is to send daily reports through email about the course's users and to make monthly checks on the channels in order to ban defaulting users. UPDATE: Now it has an integration with DerivAPI (Binary) that makes it check for wins/losses of forex signals and reply it on Telegram channels.",
                         "itemsTitle": "Development tools",
                         "items": ["NodeJS", "TelegrafJS", "Telegram Bot API", "Cron Jobs", "Nodemailer", "MySQL", "DerivAPI", "KingHost Hosting Service"],
